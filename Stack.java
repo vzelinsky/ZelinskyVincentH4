@@ -9,7 +9,7 @@ public class Stack {
   private Node head;
   
   //Constructors
-  //No argument constructor that when called creates an empty List
+  //No argument constructor that when called creates an empty Stack
   public Stack() {
     //Sets head to null
     this.head = null;
