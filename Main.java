@@ -17,5 +17,20 @@ public class Main {
     System.out.println(myStack.pop().getData());
     System.out.println(myStack.peek().getData());
     System.out.println(myStack.pop().getData());
+    
+    System.out.println("------------------------");
+    
+    Queue myQueue = new Queue();
+    myQueue.enqueue("Alpha");
+    myQueue.enqueue("Bravo");
+    myQueue.enqueue("Delta");
+    myQueue.enqueue("Echo");
+    myQueue.enqueue("Charlie");
+    myQueue.enqueue("Foxtrot");
+    
+    System.out.println(myQueue.dequeue().getData());
+    System.out.println(myQueue.dequeue().getData());
+    System.out.println(myQueue.peek().getData());
+    System.out.println(myQueue.dequeue().getData());
   }
 }
