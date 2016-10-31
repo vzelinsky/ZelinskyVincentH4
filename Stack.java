@@ -27,10 +27,23 @@ public class Stack {
   public void push(String dataInput) {
     //Case 1: if the Stack is empty (head = null)
     //Inserts the new Node at head
-    if(head == null) {
+    if(this.head == null) {
       //Add the Node as the head
-      head = new Node(dataInput);
+      this.head = new Node(dataInput);
     }
+    else{
+      n = new Node(dataInput);
+      n.setNext(head);
+      this.head = n;
+    }
+  }
+  //pop method
+  //Returns a Node from the top of the Stack, then removes it from the Stack
+  public Node pop() {
+    Node t = this.head;
+    this.head = head.getNext();
+    t.setNext(null);
+    return(t);
   }
   //deleteStack method
   //Removes references to the Stack, deleting the Stack
