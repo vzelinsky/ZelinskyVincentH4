@@ -1,4 +1,4 @@
-/* Node.java
+/* Node.java(S+Q)
  * Written by Vincent Zelinsky
  * 
  * Contains the necessary constructors, getters, and setters to create a Node and interact with Stack.java and Queue.java
