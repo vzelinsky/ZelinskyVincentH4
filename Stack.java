@@ -32,7 +32,7 @@ public class Stack {
       this.head = new Node(dataInput);
     }
     else{
-      n = new Node(dataInput);
+      Node n = new Node(dataInput);
       n.setNext(head);
       this.head = n;
     }
@@ -45,6 +45,12 @@ public class Stack {
     t.setNext(null);
     return(t);
   }
+  //peek method
+  //Returns a Node from the top of the Stack
+  public Node peek() {
+    return this.head;
+  }
+  
   //deleteStack method
   //Removes references to the Stack, deleting the Stack
   public void deleteStack() {
