@@ -76,7 +76,7 @@ public class Main {
         stackInput.push(newList.getTail().getData());
         newList.deleteTail();
       }
-      System.out.println("Stack to Queue transfer complete");
+      System.out.println("Queue to Stack transfer complete");
     }
   }
   public static void stack2stack(Stack stackInput1, Stack stackInput2) {
