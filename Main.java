@@ -32,5 +32,23 @@ public class Main {
     System.out.println(myQueue.dequeue().getData());
     System.out.println(myQueue.peek().getData());
     System.out.println(myQueue.dequeue().getData());
+    
+    System.out.println("------------------------");
+    
+    Queue myStacktoQueue = new Queue();
+    stack2queue(myStack,myStacktoQueue);
+    System.out.println(myStacktoQueue.dequeue().getData());
+    System.out.println(myStacktoQueue.peek().getData());
+
+  }
+  public static void stack2queue(Stack stackInput, Queue queueInput) {
+    if (stackInput.peek() == null)
+      System.out.println("Stack is empty");
+    else {
+      while (stackInput.peek() != null){
+        queueInput.enqueue(stackInput.pop().getData());
+      }
+      System.out.println("Stack to Queue transfer complete");
+    }
   }
 }
