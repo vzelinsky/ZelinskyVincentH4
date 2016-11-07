@@ -31,12 +31,9 @@ public class List {
   }
   
   //addNode method
-  /* Adds a Node to the List in alphabetical order
-   * Compares Strings of pre-existing Nodes with the String passed in the argument with the compareTo method
-   * Sorts where the new Node should go depending on the output returned by compareTo and its relationship to 0
-   */
+  //Adds a Node to the List in chronological order
   public void addNode(String dataInput) {
-    //Case 1: if the List is empty (head = null)
+    //if the List is empty (head = null)
     //Inserts the new Node at head and makes it the tail as it is the only Node
     if(head == null) {
       //Add the Node as the head
@@ -45,7 +42,7 @@ public class List {
       tail = head;
     }
     else {
-      //Creates a new Node and calls the second constructor in Node
+      //Creates a new Node and calls the third constructor in Node
       //The argument gets passed as the String, the next Node is null, and the prev Node is the tail 
       Node n = new Node(dataInput, null, tail);
       //The new Node is added as the next Node of the current tail
@@ -70,12 +67,12 @@ public class List {
     }
   }
   
-  //deleteNode method
-  //Calls the findNode method and passes the argument, then deletes the returned Node
+  //deleteTail method
+  //Deletes the tail Node and sets the new tail
   public void deleteTail() {
-    //Calls the findNode method, passes the argument to it, and initializes a Node to be deleted, d, as the returned Node
+    //Initializes a temp Node to be deleted, d, at tail
     Node d = tail;
-    //if the Node returned is null
+    //if the tail is null
     if(d == null) {
       //Print that the Node does not exist
       System.out.println("Node did not exist");
