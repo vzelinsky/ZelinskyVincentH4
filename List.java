@@ -100,7 +100,7 @@ public class List {
         //The prev Node before Node next is Node prev (routing around Node d)
         next.setPrev(prev);
       //Print success
-      System.out.println("The Node has been deleted");
+      //System.out.println("The Node has been deleted");
     }
   }
   
