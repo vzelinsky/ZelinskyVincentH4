@@ -8,51 +8,81 @@ public class Main {
     Stack myStack = new Stack();
     myStack.push("Alpha");
     myStack.push("Bravo");
-    myStack.push("Delta");
-    myStack.push("Echo");
     myStack.push("Charlie");
-    myStack.push("Foxtrot");
+    myStack.push("Delta");
     
+    System.out.println("myStack\n");
+    System.out.println(myStack.pop().getData());
     System.out.println(myStack.pop().getData());
     System.out.println(myStack.pop().getData());
     System.out.println(myStack.peek().getData());
     System.out.println(myStack.pop().getData());
     
-    System.out.println("------------------------");
+    System.out.println("-------------------------------");
     
     Queue myQueue = new Queue();
     myQueue.enqueue("Alpha");
     myQueue.enqueue("Bravo");
-    myQueue.enqueue("Delta");
-    myQueue.enqueue("Echo");
     myQueue.enqueue("Charlie");
-    myQueue.enqueue("Foxtrot");
+    myQueue.enqueue("Delta");
     
+    System.out.println("myQueue\n");
+    System.out.println(myQueue.dequeue().getData());
     System.out.println(myQueue.dequeue().getData());
     System.out.println(myQueue.dequeue().getData());
     System.out.println(myQueue.peek().getData());
     System.out.println(myQueue.dequeue().getData());
     
-    System.out.println("------------------------");
+    System.out.println("-------------------------------");
+
+    myStack.push("Alpha");
+    myStack.push("Bravo");
+    myStack.push("Charlie");
+    myStack.push("Delta");
     
     Queue myStacktoQueue = new Queue();
     stack2queue(myStack,myStacktoQueue);
+    
+    System.out.println("\nA queue that prints like myStack\n");
+    System.out.println(myStacktoQueue.dequeue().getData());
+    System.out.println(myStacktoQueue.dequeue().getData());
     System.out.println(myStacktoQueue.dequeue().getData());
     System.out.println(myStacktoQueue.peek().getData());
+    System.out.println(myStacktoQueue.dequeue().getData());
     
-    System.out.println("------------------------");
+    System.out.println("-------------------------------");
+    
+    myQueue.enqueue("Alpha");
+    myQueue.enqueue("Bravo");
+    myQueue.enqueue("Charlie");
+    myQueue.enqueue("Delta");
     
     Stack myQueuetoStack = new Stack();
     queue2stack(myQueue,myQueuetoStack);
+    
+    System.out.println("\nA stack that prints like myQueue\n");
+    System.out.println(myQueuetoStack.pop().getData());
+    System.out.println(myQueuetoStack.pop().getData());
     System.out.println(myQueuetoStack.pop().getData());
     System.out.println(myQueuetoStack.peek().getData());
+    System.out.println(myQueuetoStack.pop().getData());
     
-    System.out.println("------------------------");
+    System.out.println("-------------------------------");
+    
+    myStack.push("Alpha");
+    myStack.push("Bravo");
+    myStack.push("Charlie");
+    myStack.push("Delta");
     
     Stack myStacktoStack = new Stack();
-    stack2stack(myQueuetoStack,myStacktoStack);
+    stack2stack(myStack,myStacktoStack);
+    
+    System.out.println("\nA stack that prints like myStack\n");
+    System.out.println(myStacktoStack.pop().getData());
+    System.out.println(myStacktoStack.pop().getData());
     System.out.println(myStacktoStack.pop().getData());
     System.out.println(myStacktoStack.peek().getData());
+    System.out.println(myStacktoStack.pop().getData());
   }
   public static void stack2queue(Stack stackInput, Queue queueInput) {
     if (stackInput.peek() == null)
