@@ -51,4 +51,15 @@ public class Main {
       System.out.println("Stack to Queue transfer complete");
     }
   }
+  public static void queue2stack(Queue queueInput, Stack stackInput) {
+    if (queueInput.peek() == null)
+      System.out.println("Queue is empty");
+    else {
+      while (queueInput.peek() != null){
+        
+        stackInput.push(stackInput.pop().getData());
+      }
+      System.out.println("Stack to Queue transfer complete");
+    }
+  }
 }
