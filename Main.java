@@ -65,31 +65,29 @@ public class Main {
     }
   }
   public static void queue2stack(Queue queueInput, Stack stackInput) {
-    List newList = new List();
+    Stack tempStack = new Stack();
     if (queueInput.peek() == null)
       System.out.println("Queue is empty");
     else {
       while (queueInput.peek() != null){
-        newList.addNode(queueInput.dequeue().getData());
+        tempStack.push(queueInput.dequeue().getData());
       }
-      while (newList.getHead() != null){
-        stackInput.push(newList.getTail().getData());
-        newList.deleteTail();
+      while (tempStack.peek() != null){
+        stackInput.push(tempStack.pop().getData());
       }
       System.out.println("Queue to Stack transfer complete");
     }
   }
   public static void stack2stack(Stack stackInput1, Stack stackInput2) {
-    List newList = new List();
+    Stack tempStack = new Stack();
     if (stackInput1.peek() == null)
       System.out.println("Stack is empty");
     else {
       while (stackInput1.peek() != null){
-        newList.addNode(stackInput1.pop().getData());
+        tempStack.push(stackInput1.pop().getData());
       }
-      while (newList.getHead() != null){
-        stackInput2.push(newList.getTail().getData());
-        newList.deleteTail();
+      while (tempStack.peek() != null){
+        stackInput2.push(tempStack.pop().getData());
       }
       System.out.println("Stack to Stack transfer complete");
     }
