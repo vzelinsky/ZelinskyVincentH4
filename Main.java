@@ -65,7 +65,7 @@ public class Main {
       while (queueInput.peek() != null){
         newList.addNode(queueInput.dequeue().getData());
       }
-      while (newList.getHead().getData() != null){
+      while (newList.getHead() != null){
         stackInput.push(newList.getTail().getData());
         newList.deleteTail();
       }
