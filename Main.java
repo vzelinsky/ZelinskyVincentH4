@@ -4,6 +4,7 @@
  * Contains the methods to test Stack.java and Queue.java
  */
 public class Main {
+  //main method
   public static void main(String[] args) {
     //Creates a Stack called myStack
     Stack myStack = new Stack();
