@@ -46,6 +46,13 @@ public class Main {
     queue2stack(myQueue,myQueuetoStack);
     System.out.println(myQueuetoStack.pop().getData());
     System.out.println(myQueuetoStack.peek().getData());
+    
+    System.out.println("------------------------");
+    
+    Stack myStacktoStack = new Stack();
+    stack2stack(myQueuetoStack,myStacktoStack);
+    System.out.println(myStacktoStack.pop().getData());
+    System.out.println(myStacktoStack.peek().getData());
   }
   public static void stack2queue(Stack stackInput, Queue queueInput) {
     if (stackInput.peek() == null)
@@ -70,6 +77,21 @@ public class Main {
         newList.deleteTail();
       }
       System.out.println("Stack to Queue transfer complete");
+    }
+  }
+  public static void stack2stack(Stack stackInput1, Stack stackInput2) {
+    List newList = new List();
+    if (stackInput1.peek() == null)
+      System.out.println("Stack is empty");
+    else {
+      while (stackInput1.peek() != null){
+        newList.addNode(stackInput1.pop().getData());
+      }
+      while (newList.getHead() != null){
+        stackInput2.push(newList.getTail().getData());
+        newList.deleteTail();
+      }
+      System.out.println("Stack to Stack transfer complete");
     }
   }
 }
